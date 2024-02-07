@@ -86,7 +86,7 @@ public class TaskService implements ITaskService {
             taskFound.setStatus(status);
             responseDTO.setData(taskRepository.save(taskFound));
 
-            responseDTO.setMensaje("Cambio el estado de la tarea con el nombre : " + taskFound.getNameTark());
+            responseDTO.setMensaje("La tarea con el nombre : " + taskFound.getNameTark() + ", cambio el estado a: " +status);
             responseDTO.setCodigoRespuesta(HttpStatus.CREATED.value());
 
             return responseDTO;
